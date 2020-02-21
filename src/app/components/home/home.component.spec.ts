@@ -11,9 +11,7 @@ import { Location } from '@angular/common';
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 import { SeeAllMoviesComponent } from '../see-all-movies/see-all-movies.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
-import { HomeButtonComponent } from '../home-button/home-button.component';
-import { BackButtonComponent } from '../back-button/back-button.component';
-import { AllMoviesButtonComponent } from '../all-movies-button/all-movies-button.component';
+import { GetGenresPipe } from 'src/app/get-genres.pipe';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -29,9 +27,7 @@ describe('HomeComponent', () => {
         HomeComponent,
         SeeAllMoviesComponent,
         NotFoundComponent,
-        HomeButtonComponent,
-        BackButtonComponent,
-        AllMoviesButtonComponent
+        GetGenresPipe
       ],
       imports: [RouterTestingModule.withRoutes(routes), FormsModule]
     })

@@ -7,8 +7,6 @@ import { MovieThumbnailComponent } from '../movie-thumbnail/movie-thumbnail.comp
 import { MoviesListComponent } from '../movies-list/movies-list.component';
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 import { HomeComponent } from '../home/home.component';
-import { BackButtonComponent } from '../back-button/back-button.component';
-import { HomeButtonComponent } from '../home-button/home-button.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 
@@ -20,8 +18,6 @@ describe('NotFoundComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         NotFoundComponent,
-        BackButtonComponent,
-        HomeButtonComponent
       ],
       imports: [RouterTestingModule, FormsModule]
     })

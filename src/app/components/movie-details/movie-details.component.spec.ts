@@ -3,14 +3,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MovieDetailsComponent } from './movie-details.component';
 import { MovieThumbnailComponent } from '../movie-thumbnail/movie-thumbnail.component';
 import { MoviesListComponent } from '../movies-list/movies-list.component';
-import { BackButtonComponent } from '../back-button/back-button.component';
-import { HomeButtonComponent } from '../home-button/home-button.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from '../home/home.component';
 import { SeeAllMoviesComponent } from '../see-all-movies/see-all-movies.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
-import { AllMoviesButtonComponent } from '../all-movies-button/all-movies-button.component';
+import { GetGenresPipe } from 'src/app/get-genres.pipe';
 
 describe('MovieDetailsComponent', () => {
   let component: MovieDetailsComponent;
@@ -22,12 +20,10 @@ describe('MovieDetailsComponent', () => {
         MovieThumbnailComponent,
         MoviesListComponent,
         MovieDetailsComponent,
-        BackButtonComponent,
-        HomeButtonComponent,
         HomeComponent,
         SeeAllMoviesComponent,
         NotFoundComponent,
-        AllMoviesButtonComponent
+        GetGenresPipe
       ],
       imports: [RouterTestingModule, FormsModule]
     })
