@@ -1,0 +1,19 @@
+<!-- <app-home-button></app-home-button>
+<app-all-movies-button></app-all-movies-button>
+<app-back-button (back)="goBack()"></app-back-button> -->
+<div class="movieCard" *ngIf="movie">
+    <img src="../../../assets/images/movie-covers/{{movie.img}}" alt="{{movie.name}} cover">
+    <div class="description">
+
+        <h1>{{movie.name}}</h1>
+        <h5>{{getGenres()}}&nbsp;-&nbsp;{{movie.length}}</h5>
+        <p>
+            {{movie.description}}
+        </p>
+        <p class="rating"> Rating:&nbsp;<span class="{{getColorClass()}}">{{movie.rate}}</span> </p>
+    </div>
+</div>
+<div class="similiarMovies">
+    <h4>Similiar Movies</h4>
+    <app-movies-list [moviesToShow]="similiarMovies"></app-movies-list>
+</div>

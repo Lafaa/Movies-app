@@ -1,0 +1,4 @@
+<div class="thumbnail" [routerLink]="['/movie', movie.id]" *ngIf="movie">
+    <img src="../../../assets/images/movie-covers/{{movie.img}}" alt="{{movie.name}} cover">
+    <p>{{movie.name}}</p>
+</div>

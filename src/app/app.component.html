@@ -1,0 +1,7 @@
+<div class="container">
+    <nav class="navigationBar">
+        <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a [routerLink]="['/movies']" routerLinkActive="active">Movie List</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>

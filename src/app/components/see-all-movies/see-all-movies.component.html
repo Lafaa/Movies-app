@@ -1,0 +1,38 @@
+<!-- <app-home-button></app-home-button>
+<app-back-button (back)="goBack()"></app-back-button> -->
+<h1>All Movies</h1>
+<form class="form-inline">
+    <!-- Form to search by text or by Genre-->
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="searchInput" placeholder="Search for a Title"
+            [ngModel]="searchInput" (ngModelChange)='changedSearchText($event)'>
+    </div>
+    <div class="form-group">
+        <label>Genre</label>
+        <select name="selectedGenre" class="form-control" [ngModel]="selectedGenre"
+            (ngModelChange)='changedGenre($event)'>
+            <option value="{{genre.value}}" *ngFor="let genre of GenreType | keyvalue">{{genre.key}}</option>
+            <option value="">All</option>
+        </select>
+    </div>
+</form>
+
+<app-movies-list [moviesToShow]="moviesToShow"></app-movies-list> <!-- show results-->
+<p class="noResults" *ngIf="moviesToShow.length === 0">No movie found</p>
+
+<!-- Pages links to navigate through the pages-->
+<nav aria-label="Page navigation example" *ngIf="pages.length > 1">
+    <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage === 1" (click)="setPage(currentPage-1)">
+            <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item" [class.active]="currentPage-1 === item" *ngFor="let item of pages"
+            (click)="setPage(item+1)">
+            <a class="page-link">{{item+1}}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === pages.length" (click)="setPage(currentPage+1)">
+            <a class="page-link">Next</a>
+        </li>
+    </ul>
+</nav>
