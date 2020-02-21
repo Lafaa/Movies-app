@@ -34,11 +34,6 @@ export class MovieDetailsComponent implements OnInit {
         });
     }
 
-    // function needed to display the genres of a movie in a user friendly way
-    getGenres() {
-        return this.movie.genres.map((x: string) => x.charAt(0).toUpperCase() + x.slice(1)).join(', ');
-    }
-
     // get a colour based on the value of the rate
     getColorClass(rating = parseFloat(this.movie.rate)) {
         switch (true) {

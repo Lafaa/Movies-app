@@ -6,7 +6,7 @@
     <div class="description">
 
         <h1>{{movie.name}}</h1>
-        <h5>{{getGenres()}}&nbsp;-&nbsp;{{movie.length}}</h5>
+        <h5>{{movie | getGenres}}&nbsp;-&nbsp;{{movie.length}}</h5>
         <p>
             {{movie.description}}
         </p>

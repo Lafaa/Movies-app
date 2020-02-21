@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SeeAllMoviesComponent } from './components/see-all-movies/see-all-movies.component';
 import { SearchStoreService } from './services/search-store/search-store.service';
+import { GetGenresPipe } from './get-genres.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchStoreService } from './services/search-store/search-store.service
     MovieDetailsComponent,
     HomeComponent,
     NotFoundComponent,
-    SeeAllMoviesComponent
+    SeeAllMoviesComponent,
+    GetGenresPipe
   ],
   imports: [
     BrowserModule,
